@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-inter text-text-primary;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-montserrat font-semibold leading-tight;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-2xl px-6 py-3 font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply btn bg-text-primary text-white hover:bg-text-secondary focus:ring-text-primary;
+  }
+  
+  .btn-accent {
+    @apply btn bg-accent-DEFAULT text-white hover:bg-accent-dark focus:ring-accent-DEFAULT;
+  }
+  
+  .btn-outline {
+    @apply btn border-2 border-text-primary bg-transparent text-text-primary hover:bg-text-primary hover:text-white focus:ring-text-primary;
+  }
+  
+  .container-custom {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section {
+    @apply py-12 md:py-20;
+  }
+  
+  .section-title {
+    @apply mb-12 text-center font-montserrat text-3xl font-bold md:text-4xl;
+  }
+  
+  .card {
+    @apply rounded-xl bg-white p-6 shadow-soft transition-all duration-300 hover:shadow-medium;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-light to-accent bg-clip-text text-transparent;
+  }
+}
